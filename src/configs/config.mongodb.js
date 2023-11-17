@@ -1,4 +1,4 @@
-import { ENV } from "../enviroments/env";
+import { ENV } from "../enviroments/env.js";
 
 const dev = {
     app: {

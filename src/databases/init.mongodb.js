@@ -33,4 +33,6 @@ class Database {
     }
 }
 
-export default new Database();
+const instanceMongodb = Database.getInstance();
+
+export default instanceMongodb;

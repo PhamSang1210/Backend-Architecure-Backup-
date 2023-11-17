@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import configDatabase from "../configs/config.mongodb.js";
+import { countConnect } from "../helpers/check.connect.js";
 
 const { host, port, name } = configDatabase.db;
 
@@ -19,7 +20,8 @@ class Database {
 
         try {
             await mongoose.connect(connectString);
-            console.log("SUCCESS <3");
+            // Check connectDatabse
+            console.log("SUCCESS <3", countConnect());
         } catch (error) {
             console.log("ERROR !!!!!!!!!!!!!!");
         }

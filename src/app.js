@@ -20,7 +20,7 @@ app.use(
 );
 // init db
 connectDatabse;
-checkOverLoad();
+// checkOverLoad();
 // init routes
 routes(app);
 // init handle error

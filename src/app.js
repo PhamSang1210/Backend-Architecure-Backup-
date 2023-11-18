@@ -6,6 +6,7 @@ import helmet from "helmet";
 import compression from "compression";
 import routes from "./routes/index.js";
 import connectDatabse from "./databases/init.mongodb.js";
+import { checkOverLoad } from "./helpers/check.connect.js";
 
 // init middleware
 app.use(morgan("dev"));
@@ -19,6 +20,7 @@ app.use(
 );
 // init db
 connectDatabse;
+checkOverLoad();
 // init routes
 routes(app);
 // init handle error
